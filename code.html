@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Geist:wght@300;400;500;600;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'primary-fixed': '#c3f400', 'secondary': '#ffb4aa', 'surface-bright': '#393939', 'on-secondary-fixed': '#410001', 'outline-variant': '#444933', 'secondary-fixed': '#ffdad5', 'inverse-primary': '#506600', 'on-primary-container': '#556d00', 'inverse-surface': '#e5e2e1', 'surface-dim': '#131313', 'background': '#131313', 'on-secondary-container': '#ffd2cc', 'tertiary': '#ffffff', 'on-surface': '#e5e2e1', 'on-surface-variant': '#c4c9ac', 'on-error': '#690005', 'on-background': '#e5e2e1', 'surface-tint': '#abd600', 'on-primary-fixed-variant': '#3c4d00', 'on-error-container': '#ffdad6', 'on-tertiary': '#303035', 'tertiary-container': '#e4e1e8', 'surface-container-low': '#1c1b1b', 'tertiary-fixed-dim': '#c7c5cc', 'surface-container': '#201f1f', 'on-secondary-fixed-variant': '#930005', 'surface-container-high': '#2a2a2a', 'secondary-container': '#c5020b', 'primary-fixed-dim': '#abd600', 'inverse-on-surface': '#313030', 'on-tertiary-fixed-variant': '#46464b', 'surface': '#131313', 'surface-container-lowest': '#0e0e0e', 'primary': '#ffffff', 'outline': '#8e9379', 'tertiary-fixed': '#e4e1e8', 'secondary-fixed-dim': '#ffb4aa', 'error': '#ffb4ab', 'surface-container-highest': '#353534', 'on-tertiary-container': '#646469', 'on-primary-fixed': '#161e00', 'on-tertiary-fixed': '#1b1b20', 'error-container': '#93000a', 'surface-variant': '#353534', 'primary-container': '#c3f400', 'on-primary': '#283500', 'on-secondary': '#690003' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'margin-tablet': '2rem', 'gutter': '1rem', 'margin': '1rem', 'space-xs': '0.25rem', 'space-lg': '1.5rem', 'gutter-desktop': '2rem', 'margin-desktop': '4rem', 'space-md': '1rem', 'space-xl': '2.5rem', 'space-sm': '0.5rem', 'gutter-tablet': '1.5rem' }, fontFamily: { 'body-lg': ['Geist'], 'headline-xl': ['Anton'], 'display-hero': ['Anton'], 'headline-xl-mobile': ['Anton'], 'label-sm': ['Space Mono'], 'body-sm': ['Geist'], 'headline-md': ['Anton'], 'label-md': ['Space Mono'], 'label-lg': ['Space Mono'], 'headline-lg': ['Anton'], 'display-hero-mobile': ['Anton'], 'body-md': ['Geist'], 'body-xl': ['Geist'], 'headline-sm': ['Anton'] }, fontSize: { 'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'headline-xl': ['48px', { lineHeight: '52px', letterSpacing: '0.03em', fontWeight: '400' }], 'display-hero': ['72px', { lineHeight: '76px', letterSpacing: '0.04em', fontWeight: '400' }], 'headline-xl-mobile': ['32px', { lineHeight: '36px', letterSpacing: '0.02em', fontWeight: '400' }], 'label-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.08em', fontWeight: '400' }], 'body-sm': ['12px', { lineHeight: '16px', fontWeight: '400' }], 'headline-md': ['24px', { lineHeight: '28px', letterSpacing: '0.02em', fontWeight: '400' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.05em', fontWeight: '400' }], 'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.06em', fontWeight: '700' }], 'headline-lg': ['32px', { lineHeight: '36px', letterSpacing: '0.02em', fontWeight: '400' }], 'display-hero-mobile': ['44px', { lineHeight: '48px', letterSpacing: '0.03em', fontWeight: '400' }], 'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'body-xl': ['18px', { lineHeight: '28px', fontWeight: '400' }], 'headline-sm': ['20px', { lineHeight: '24px', letterSpacing: '0.01em', fontWeight: '400' }] } } } };</script></head><body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 flex flex-col"><div class="bg-surface-container-lowest px-margin flex items-center justify-between h-8"><div class="w-6 hidden md:block"></div><div class="flex items-center gap-space-xs mx-auto text-center"><span class="text-on-surface-variant font-label-sm text-label-sm tracking-wider uppercase">ENVÍO GRATIS EN PEDIDOS SUPERIORES A $999 MXN | CÓDIGO:</span><span class="font-label-sm text-label-sm tracking-widest text-primary-container font-bold">PULSEFIT</span></div><button class="text-on-surface-variant hover:text-primary transition-colors focus:outline-none flex items-center justify-center p-space-xs" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button></div><div class="bg-surface-container-low/95 backdrop-blur-md"><div class="h-20 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-gutter"><nav class="hidden lg:flex items-center gap-space-lg flex-1" data-active-classes="text-primary-container font-headline-sm text-headline-sm"><a class="text-on-surface-variant hover:text-primary transition-colors font-headline-sm text-headline-sm uppercase tracking-wide" data-path="ropa" href="#">ROPA</a><a class="text-on-surface-variant hover:text-primary transition-colors font-headline-sm text-headline-sm uppercase tracking-wide" data-path="accesorios" href="#">ACCESORIOS</a><a class="text-on-surface-variant hover:text-primary transition-colors font-headline-sm text-headline-sm uppercase tracking-wide" data-path="ofertas" href="#">OFERTAS</a><a class="text-on-surface-variant hover:text-primary transition-colors font-headline-sm text-headline-sm uppercase tracking-wide" data-path="nosotros" href="#">NOSOTROS</a><a class="text-on-surface-variant hover:text-primary transition-colors font-headline-sm text-headline-sm uppercase tracking-wide" data-path="lookbook" href="#">LOOKBOOK</a></nav><div class="flex lg:hidden items-center"><button class="text-on-surface hover:text-primary p-space-xs focus:outline-none" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div><div class="flex items-center justify-center gap-space-sm"><a class="flex items-center gap-space-sm group focus:outline-none" data-path="inicio" href="#"><img alt="IronPulse Athletic Gym Gear Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XhNhdoVU27wqWszfKWRT8euZ8xjLQ7tCwTriWBnFOUCk8zh_wNuS3Fz_G3ZfrfLUS5VnF7O1ZVFenrVhggekE2iFR7H-geQrxTmuYEt3JZ6E_rYs-0joZ5l-8O8r4iab9KcorKlcA-_ArTwKaqHh92QQxmozk1Letuzeg3iTVn8IaJhGAUNIIguMZzUuocaH4i69Xut8HBJlCJFySNHn6xY47stBbSM991Z4rz25MB_XYh6AWnhsJe-NE"/><span class="font-headline-lg text-headline-lg uppercase text-primary tracking-wider group-hover:text-primary-container transition-colors">IRONPULSE</span></a></div><div class="flex items-center justify-end gap-space-md flex-1"><button class="text-on-surface-variant hover:text-primary transition-colors p-space-xs focus:outline-none flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="text-on-surface-variant hover:text-primary transition-colors p-space-xs focus:outline-none flex items-center justify-center" data-path="cuenta" href="#"><span class="material-symbols-outlined text-[20px]">person</span></a><a class="text-on-surface-variant hover:text-primary transition-colors p-space-xs focus:outline-none relative flex items-center justify-center" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[20px]">favorite</span></a><a class="text-on-surface-variant hover:text-primary transition-colors p-space-xs focus:outline-none relative flex items-center justify-center" data-path="carrito" href="#"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute -top-1 -right-1 bg-primary-container text-on-primary-fixed font-label-sm text-label-sm font-bold w-4 h-4 rounded-full flex items-center justify-center">3</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-28 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- 2. HERO PRINCIPAL -->
+<section class="relative w-full overflow-hidden -mt-28 pt-28 pb-16 lg:pb-24 flex items-center min-h-[92vh] bg-surface-container-lowest">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-center opacity-45 scale-105 transition-transform duration-1000" data-alt="Cinematic shot of a muscular athletic bearded man in a dark hoodie lifting a heavy iron barbell with gym chalk exploding in an industrial urban warehouse gym, dramatic side lighting with blue and neon yellow backlights, high contrast dark brutalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbqr1JnpYlI9PCfLvhjDnjj6_3mQ5vCxNvBgTrCwzE-XyOEPAQeimd8MdF7ihRNAoxYy9RfpVhg05q69ylJUYeu8QC3_TESfrXAGpissojYXWSFd06APLTwVQLug2MpBmBQ3seH5JVAnlKURV76CfKNzDs7Br11E6R4SBFg4dVa0u8Aap5_H6y27TJ1C6wuLa82cqFxIgXDICLzgl_S3007Ph6tKGflMFbbMj5aH-6hjNjyq4n76RoMw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-surface-container-lowest/40"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl flex flex-col justify-center">
+<div class="max-w-4xl flex flex-col items-start gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-high/90 border border-primary-container/40 shadow-sm backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-bold">COLECCIÓN DROP 04 // OVERDRIVE</span>
+</div>
+<h1 class="font-headline-xl lg:font-display-hero text-headline-xl lg:text-display-hero text-tertiary uppercase leading-none tracking-tight">
+          EQUÍPATE COMO UN ATLETA.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-white to-primary-container">ENTRENA SIN LÍMITES.</span>
+</h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant max-w-2xl leading-relaxed">
+          Indumentaria técnica streetwear y accesorios de grado profesional desarrollados para resistir tus levantamientos más pesados bajo cualquier condición.
+        </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-sm w-full sm:w-auto">
+<a class="px-space-lg py-3.5 bg-primary-container hover:bg-primary-fixed text-on-primary-fixed font-label-lg text-label-lg uppercase tracking-wider rounded flex items-center justify-center gap-space-xs transition-all duration-200 shadow-[0_0_20px_rgba(195,244,0,0.35)] hover:shadow-[0_0_28px_rgba(195,244,0,0.55)] group" href="#mas-vendidos">
+<span>COMPRAR AHORA</span>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200 group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="px-space-lg py-3.5 bg-surface-container-high/70 hover:bg-surface-container-highest text-tertiary font-label-lg text-label-lg uppercase tracking-wider rounded border border-surface-bright hover:border-primary-container/60 backdrop-blur-sm transition-all duration-200 flex items-center justify-center gap-space-xs" href="#categorias">
+<span>EXPLORAR ACCESORIOS</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">fitness_center</span>
+</a>
+</div>
+<div class="pt-space-md flex items-center gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container/80 border border-outline-variant/30 text-on-surface">
+<span class="material-symbols-outlined text-primary-container text-[16px]">bolt</span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase font-medium">Más de 45,000 atletas equipados en Latinoamérica</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. BARRA DE CONFIANZA -->
+<section class="w-full bg-surface-container-low border-y border-outline-variant/30">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-md">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-tablet lg:gap-gutter-desktop">
+<div class="flex items-center gap-space-md p-space-xs">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center shrink-0 border border-outline-variant/40">
+<span class="material-symbols-outlined text-primary-container text-[24px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold tracking-wide">ENVÍO GRATIS</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">En pedidos mayores a $999 MXN a todo el país.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-xs">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center shrink-0 border border-outline-variant/40">
+<span class="material-symbols-outlined text-primary-container text-[24px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold tracking-wide">PAGO 100% SEGURO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cifrado SSL 256-bit y pasarelas certificadas.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-xs">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center shrink-0 border border-outline-variant/40">
+<span class="material-symbols-outlined text-primary-container text-[24px]">sync</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold tracking-wide">DEVOLUCIONES FÁCILES</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">30 días de garantía total sin preguntas.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md p-space-xs">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center shrink-0 border border-outline-variant/40">
+<span class="material-symbols-outlined text-primary-container text-[24px]">military_tech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold tracking-wide">GARANTÍA DE CALIDAD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Costuras reforzadas y materiales industriales.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. CATEGORÍAS DESTACADAS -->
+<section class="w-full py-space-xl lg:py-24 bg-surface-container-lowest" id="categorias">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b border-outline-variant/30 pb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest font-bold">// ESTRUCTURA DE EQUIPAMIENTO</span>
+<h2 class="font-headline-lg lg:font-headline-xl text-headline-lg lg:text-headline-xl text-tertiary uppercase mt-1">CATEGORÍAS DE RENDIMIENTO</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Selecciona tu arsenal especializado para romper marcas personales con protección y comodidad garantizadas.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-md">
+<!-- Cat 1 (Large) -->
+<a class="lg:col-span-7 group relative h-80 rounded overflow-hidden bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/80 transition-all duration-300" href="#">
+<img class="absolute inset-0 w-full h-full object-cover object-top filter grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" data-alt="Athletic streetwear pump cover heavyweight t-shirt on athletic model in modern dark gym backdrop dramatic lighting with neon green rim highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZiQMNIkdgkEtReSwGupIbofFdL77AbOtepgtsLb9Ycmm6IXznvqSjQ9i3Vpt7MWQivqqYSQRpbpiaxugVa8yfteoixJG0sAByXdzWSCW1pMhT4YUpIpo3umVMiRfXiZj0ZoYu5K8MCihKsZvMmBUbb3avpQyTD3pvIeQcQuftsKEg9qF53dRBlU1cdOA_z4AF6yPxi_3zTkpSjZT4CgrkSb7KHmtDaLbq2etFjIZ7z7g9xUWpJEa42Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
+<div class="absolute inset-0 p-space-lg flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-bold">01 // INDUMENTARIA</span>
+<h3 class="font-headline-md text-headline-md text-tertiary uppercase mt-1">ROPA &amp; PUMP COVERS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-1">Shorts 2-en-1, Playeras Acid-Wash 280 GSM y Sudaderas Heavyweight.</p>
+<div class="mt-space-md inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary-container group-hover:underline uppercase font-bold">
+<span>EXPLORAR CATÁLOGO</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</a>
+<!-- Cat 2 (Medium) -->
+<a class="lg:col-span-5 group relative h-80 rounded overflow-hidden bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/80 transition-all duration-300" href="#">
+<img class="absolute inset-0 w-full h-full object-cover object-center filter grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" data-alt="Heavy duty weightlifting straps figure 8 on iron barbell with knurling and white gym chalk powder macro detail dark athletic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChKjqlPQutn6gqsamBAlP-ZJ_ZUHxsY3CQLdx_-b6OKADIRPhSrA-JC7lPw7Cz2W7AeBR5V8h284c4CZniSJvzwDFB52wn5heLEmQqENAWw-ve8L2MutZugTUpRWyKK6kjQBHdTOVMFy1Cd3MSHkT8rN-fRF-SS4zYcf4kYwdZj13Qn8OAR3hbI1ZC7UZCmP8c_PFrlqY5UNMx-GwbDtokmq6uBnClubm-ZyeQ7tjARp6INVpXJTLvug"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
+<div class="absolute inset-0 p-space-lg flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-bold">02 // AGARRE EXTREMO</span>
+<h3 class="font-headline-md text-headline-md text-tertiary uppercase mt-1">STRAPS DE LEVANTAMIENTO</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1">Costura de Kevlar reforzada y silicona texturizada antideslizante.</p>
+<div class="mt-space-md inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary-container group-hover:underline uppercase font-bold">
+<span>VER STRAPS</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</a>
+<!-- Cat 3 -->
+<a class="lg:col-span-4 group relative h-72 rounded overflow-hidden bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/80 transition-all duration-300" href="#">
+<img class="absolute inset-0 w-full h-full object-cover object-center filter grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" data-alt="Matte black stainless steel athletic shaker bottle sitting on metal gym locker bench with water droplets and gym environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPMvIvtZCi0fbW-U8F-8qYebvFTXQRFS90uabcK_qe30zLU9U78Isdwo8LmwZkV7b9VAkeyaksnFReq-tKo925cpo41vBjKbzpGbiurZVG5hkJdbS1e-nQ8h0nQymJYSWr6ACuk9i833wCX8ylkgjbI1GFA_6pozkuXsNnNI2lTlpmTvwvHsVd4GDgRFF7_rulthAeaMjA5lKmEG_G-1_uG3jCDR7bz60TSNPBguSqbaHa9SzBJWQZFw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
+<div class="absolute inset-0 p-space-md flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-bold">03 // HIDRATACIÓN TÁCTICA</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase">SHAKERS TÉRMICOS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Acero inoxidable 316, 0% BPA, doble pared al vacío.</p>
+</div>
+</a>
+<!-- Cat 4 -->
+<a class="lg:col-span-4 group relative h-72 rounded overflow-hidden bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/80 transition-all duration-300" href="#">
+<img class="absolute inset-0 w-full h-full object-cover object-center filter grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" data-alt="Powerlifting black lever belt 10mm genuine leather with steel buckle resting against heavy bumper weight plates" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5XoMiG8EJACjMD8-C6-ucuXctqOBHcQqGGDZiaA514NDaaUjAsRMtPs2NXbaR-lxXUeefORR63gLP5shurxskFYP7MEOeUw4ELmtq5wqlKhYgE_E-g7xd7wKjUk8_KqgvBf90jjTKJ2_tBwzcDgerbpcgb0gQGBqMHvZ2eq1Yz0T74wyttpfzcF4vFWI9HHHCbEYGXtfR4cwBtHz678zGeOWkOQ9_0x7LMFyZhTPGAk85t1SknsfM-g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
+<div class="absolute inset-0 p-space-md flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-bold">04 // SOPORTE LUMBAR</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase">CINTURONES &amp; GUANTES</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Cinturones de palanca 10mm/13mm y muñequeras elásticas rígidas.</p>
+</div>
+</a>
+<!-- Cat 5 -->
+<a class="lg:col-span-4 group relative h-72 rounded overflow-hidden bg-surface-container-low border border-outline-variant/30 hover:border-primary-container/80 transition-all duration-300" href="#">
+<img class="absolute inset-0 w-full h-full object-cover object-center filter grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" data-alt="Tactical military style metal carabiner keychain with nylon strap and lifting accessories organized on textured slate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMmikYGBhjngyzibhS9BzlPWiZg1CqBT9lWDYemqj7nNoivWAfiFpFbI7uG16J9OUL8zYFvTz8UkL8De2QqvkH0mFr-Rh4GWVmHQ2pAAy_K5xpbp6gufE4KnlMHciohoSizbjJz8r3FKdayPIQCBI99DPCf8iryZ5i2s6HCW0OLVso3fJNse32fHjhMCoqNA5_Ad72TtG7y2DnpaQF12Oz-0jNdgIMBU8iJIQmIWowF5cjTUkm8ms9Rw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
+<div class="absolute inset-0 p-space-md flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-bold">05 // EDC &amp; HARDWARE</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase">LLAVEROS &amp; ACCESORIOS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Mosquetones tácticos, bidones de 2L y toallas magnéticas.</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- 5. PRODUCTOS MÁS VENDIDOS -->
+<section class="w-full py-space-xl lg:py-24 bg-surface-container" id="mas-vendidos">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md border-b border-outline-variant/30 pb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest font-bold">// PROBADOS EN BATALLA</span>
+<h2 class="font-headline-lg lg:font-headline-xl text-headline-lg lg:text-headline-xl text-tertiary uppercase mt-1">PRODUCTOS MÁS VENDIDOS</h2>
+</div>
+<!-- Filter Tabs -->
+<div class="flex items-center gap-space-xs p-1 bg-surface-container-high rounded border border-outline-variant/30 overflow-x-auto">
+<button class="px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase tracking-wider bg-primary-container text-on-primary-fixed font-bold" type="button">TODOS</button>
+<button class="px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-tertiary transition-colors" type="button">ROPA</button>
+<button class="px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-tertiary transition-colors" type="button">ACCESORIOS</button>
+<button class="px-space-md py-1.5 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-tertiary transition-colors" type="button">COMBOS</button>
+</div>
+</div>
+<!-- Products Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-tablet lg:gap-gutter-desktop">
+<!-- Product 1 -->
+<div class="group flex flex-col bg-surface-container-low rounded border border-outline-variant/40 hover:border-primary-container/80 transition-all duration-300 overflow-hidden">
+<div class="relative w-full h-80 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heavyweight oversized pump cover gym tee in obsidian black isolated on dark brutalist textured background studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkheEEjvVV22rk9PhISDCgLMYJjIS8eQ1BT-J-FIbmGH3deahBe3s_WpwYHJ3ck8YVlkwIX-csYWCBrldwYjptLOMXpGYAAmneXXniUSd3qANuuJaFbWy7G5DVJUTwLLN8MInJCjCOSTQ-gOmxYKBS2oodo95Rk1oENfvl923vzO3r2Xm9oHeWt7QaQNQX_inpFcdheujg4akfOM-DbuDG4GNBUTFMoGWyTgNNSxNz4jrsk_WqUwdOlA"/>
+<span class="absolute top-3 left-3 bg-primary-container text-on-primary-fixed font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase tracking-wider">MÁS VENDIDO</span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container/80 hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex gap-1">
+<span class="px-2 py-0.5 bg-surface-container-high/90 text-tertiary font-label-sm text-label-sm rounded border border-outline-variant/40">S</span>
+<span class="px-2 py-0.5 bg-surface-container-high/90 text-tertiary font-label-sm text-label-sm rounded border border-outline-variant/40">M</span>
+<span class="px-2 py-0.5 bg-surface-container-high/90 text-tertiary font-label-sm text-label-sm rounded border border-outline-variant/40">L</span>
+<span class="px-2 py-0.5 bg-surface-container-high/90 text-tertiary font-label-sm text-label-sm rounded border border-outline-variant/40">XL</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary">4.9</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(342 reseñas)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-1 leading-snug">Heavyweight Oversize Pump Tee</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Obsidian Black // 280 GSM Algodón Peinado</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-outline-variant/30">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">$699 MXN</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant line-through">$849</span>
+</div>
+<button class="p-2.5 bg-primary-container hover:bg-primary-fixed text-on-primary-fixed rounded flex items-center justify-center transition-colors shadow-sm" title="Añadir al Carrito" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col bg-surface-container-low rounded border border-outline-variant/40 hover:border-primary-container/80 transition-all duration-300 overflow-hidden">
+<div class="relative w-full h-80 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Kevlar lifting straps pair with silicone grip texture neon green stitching macro photography on dark textured slate background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJcmC6YhBSaNKWVODGRRBmuv6cAj_eyTd547tWdz4t8smLFIbCCTR6KvAgoda7GgP_2X_iqxs2TQOm6Ova4RCj6-NFZ6ZAZO6TRWfOBnipH1F2MVLRISN39b10-szqTCOz1ZtY_IbheIkUzbE1nLeRI8dm9w25gPYlfPW3qAu9J_uwv36hnw6PlWCnba2NGKaZqlVKLqvSZ_qDy30skOLW-AofTxlN7QtnoncsSo0eNgzhtdlAKPmUWA"/>
+<span class="absolute top-3 left-3 bg-primary-container text-on-primary-fixed font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase tracking-wider">TOP VENTAS</span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container/80 hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 bg-surface-container-high/90 px-2 py-1 rounded border border-outline-variant/40">
+<span class="w-3 h-3 rounded-full bg-primary-container inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-black border border-white/30 inline-block"></span>
+<span class="font-label-sm text-label-sm text-tertiary">2 Colores</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary">5.0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(680 reseñas)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-1 leading-snug">Kevlar Grip Lifting Straps (Par)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Costura Kevlar // Soporta hasta 400 kg</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-outline-variant/30">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">$449 MXN</span>
+</div>
+<button class="p-2.5 bg-primary-container hover:bg-primary-fixed text-on-primary-fixed rounded flex items-center justify-center transition-colors shadow-sm" title="Añadir al Carrito" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col bg-surface-container-low rounded border border-outline-variant/40 hover:border-primary-container/80 transition-all duration-300 overflow-hidden">
+<div class="relative w-full h-80 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Tactical matte black stainless steel gym shaker 900ml with measuring gauge and insulated cap standing on dark gym floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCplSGhEucYaSUtDyKzaWcsWNPxUmL_PGobetZ2IcSczUtl8lj7GnOphzq7j83-ktz3wUuZMoifKL9S04Y0x9UAqSuU1GJYUx3D8PBUzV7bKVNmgeIAH6pIeOmZIkCtv5fCeFEgJB8jcRlNhcqGzJF7TW0huntk-c5SYae76vjgAmHHGrIJQx2MkKBP9YT0JfvIXY3q4o6p5FmfDpTBnyMIng7dCSS6iERBHFhYrO-go96GIK8bTRo5dQ"/>
+<span class="absolute top-3 left-3 bg-primary-container text-on-primary-fixed font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase tracking-wider">MÁS VENDIDO</span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container/80 hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 bg-surface-container-high/90 text-tertiary font-label-sm text-label-sm rounded border border-outline-variant/40">900 ML / 30 OZ</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary">4.8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(215 reseñas)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-1 leading-snug">Tactical Matte Shaker Steel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Doble pared // Retiene frío 24h // Sin Olores</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-outline-variant/30">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">$549 MXN</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant line-through">$699</span>
+</div>
+<button class="p-2.5 bg-primary-container hover:bg-primary-fixed text-on-primary-fixed rounded flex items-center justify-center transition-colors shadow-sm" title="Añadir al Carrito" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group flex flex-col bg-surface-container-low rounded border border-outline-variant/40 hover:border-primary-container/80 transition-all duration-300 overflow-hidden">
+<div class="relative w-full h-80 bg-surface-container-lowest overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Men athletic 2-in-1 compression running training shorts in dark charcoal black with inner phone pocket displayed on gym floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDimvgQGvmG9HIRH2bSSrfdayzMLVUHCqJmzn4qy9So-OhsaubJogSDUKIhFUlkUOYpQForMRu5nlnIZOL395TlasPzd70a4uogHZSs9FAH2OHc2J0bn7uR0eedyezDX4OY1yKCJsAGcwx75Zh7fjZGgTYqkNTkc4pt2GgIkOvIHxWkPhei7EBllO51YERtGBkaMSeNU9jzfgXpdsuRT_PlCh_YgpCK4OVPTnT2DUO6d-sKK1babHCEnA"/>
+<span class="absolute top-3 left-3 bg-primary-container text-on-primary-fixed font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase tracking-wider">MÁS VENDIDO</span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container/80 hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3">
+<span class="px-2 py-0.5 bg-surface-container-high/90 text-primary-container font-label-sm text-label-sm rounded border border-outline-variant/40">BOLSILLO TELEFÓNICO</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-1 text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary">4.9</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(419 reseñas)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-1 leading-snug">Short Compresión 2-in-1 HyperDry</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Liner anti-rozaduras con soporte muscular</p>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-outline-variant/30">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">$789 MXN</span>
+</div>
+<button class="p-2.5 bg-primary-container hover:bg-primary-fixed text-on-primary-fixed rounded flex items-center justify-center transition-colors shadow-sm" title="Añadir al Carrito" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. POR QUÉ ELEGIRNOS -->
+<section class="w-full py-space-xl lg:py-24 bg-surface-container-lowest border-y border-outline-variant/30">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-xl">
+<div class="text-center max-w-2xl mx-auto">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest font-bold">// FILOSOFÍA DE FABRICACIÓN</span>
+<h2 class="font-headline-lg lg:font-headline-xl text-headline-lg lg:text-headline-xl text-tertiary uppercase mt-1">INGENIERÍA PARA EL ESFUERZO REAL</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">No hacemos ropa para posar. Forjamos armaduras deportivas concebidas para la tensión máxima del hierro.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-tablet lg:gap-gutter-desktop">
+<div class="p-space-lg rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-space-md relative overflow-hidden group hover:border-primary-container/60 transition-colors">
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">shield</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase">MATERIALES RESISTENTES</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+              Nylon balístico, algodón heavyweight de 280 GSM y costuras cuádruples diseñadas para no romperse en sentadilla pesada ni peso muerto con cargas extremas.
+            </p>
+</div>
+<div class="font-label-sm text-label-sm text-primary-container uppercase font-mono tracking-widest pt-space-xs border-t border-outline-variant/30">
+            SPEC: RESISTENCIA A LA TRACCIÓN 450KG
+          </div>
+</div>
+<div class="p-space-lg rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-space-md relative overflow-hidden group hover:border-primary-container/60 transition-colors">
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">apparel</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase">DISEÑO EXCLUSIVO STREETWEAR</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+              Cortes oversize con hombros caídos y estética contemporánea. Piezas de alto rendimiento que lucen con la misma autoridad en la tarima que en las calles urbanas.
+            </p>
+</div>
+<div class="font-label-sm text-label-sm text-primary-container uppercase font-mono tracking-widest pt-space-xs border-t border-outline-variant/30">
+            FIT: OVERSIZE DROP-SHOULDER MODERNO
+          </div>
+</div>
+<div class="p-space-lg rounded bg-surface-container border border-outline-variant/30 flex flex-col gap-space-md relative overflow-hidden group hover:border-primary-container/60 transition-colors">
+<div class="w-12 h-12 rounded bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">exercise</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase">HECHO PARA ENTRENAR DURO</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+              Cada prototipo es testado y aprobado por powerlifters, culturistas y atletas de Crossfit profesionales en condiciones de sudor ácido y abrasión continua.
+            </p>
+</div>
+<div class="font-label-sm text-label-sm text-primary-container uppercase font-mono tracking-widest pt-space-xs border-t border-outline-variant/30">
+            TEST: 1,000+ HORAS DE TESTEO REAL
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. PRUEBA SOCIAL -->
+<section class="w-full py-space-xl lg:py-24 bg-surface-container">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest font-bold">// VOZ DE LA COMUNIDAD</span>
+<h2 class="font-headline-lg lg:font-headline-xl text-headline-lg lg:text-headline-xl text-tertiary uppercase mt-1">RESPALDADO POR ATLETAS</h2>
+</div>
+<div class="flex items-center gap-space-md p-space-sm bg-surface-container-low rounded border border-outline-variant/30">
+<span class="font-headline-lg text-headline-lg text-primary-container leading-none">4.9</span>
+<div class="flex flex-col">
+<div class="flex text-primary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">MÁS DE 12,400+ RESEÑAS VERIFICADAS</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-tablet lg:gap-gutter-desktop">
+<!-- Review 1 -->
+<div class="p-space-lg rounded bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-tertiary italic leading-relaxed mt-1">
+              "Los straps tienen el mejor agarre que he probado. Levanté 260kg de peso muerto en mi último mock meet sin ningún deslizamiento. La costura no cede absolutamente nada."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm border-t border-outline-variant/30">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-primary-container/40 flex items-center justify-center font-bold font-headline-sm text-primary-container">
+              MR
+            </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-tertiary font-bold">Mateo R.</span>
+<span class="material-symbols-outlined text-[14px] text-primary-container" title="Comprador Verificado">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Powerlifter Competitivo • Kevlar Straps</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-space-lg rounded bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-tertiary italic leading-relaxed mt-1">
+              "La sudadera pump cover tiene una caída brutal y el shaker de acero no retiene olores de proteína jamás, incluso después de un día entero en la maleta. 100% recomendados."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm border-t border-outline-variant/30">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-primary-container/40 flex items-center justify-center font-bold font-headline-sm text-primary-container">
+              SV
+            </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-tertiary font-bold">Sofía V.</span>
+<span class="material-symbols-outlined text-[14px] text-primary-container" title="Comprador Verificado">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Crossfit Coach • Tactical Shaker &amp; Hoodie</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-space-lg rounded bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex text-primary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-tertiary italic leading-relaxed mt-1">
+              "La playera resiste los lavados frecuentes y el sudor intenso sin encogerse ni deformar el cuello. El calce oversize en hombros es exacto para cuando estás bombeado."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm border-t border-outline-variant/30">
+<div class="w-10 h-10 rounded-full bg-surface-container-high border border-primary-container/40 flex items-center justify-center font-bold font-headline-sm text-primary-container">
+              CD
+            </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-tertiary font-bold">Carlos D.</span>
+<span class="material-symbols-outlined text-[14px] text-primary-container" title="Comprador Verificado">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bodybuilding Amateur • Pump Tee Oversize</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. BANNER DE OFERTA CON COUNTDOWN -->
+<section class="w-full bg-primary-container text-on-primary-fixed py-space-xl overflow-hidden relative">
+<div class="absolute -right-10 -bottom-10 opacity-10 select-none pointer-events-none">
+<span class="font-headline-xl text-[240px] leading-none uppercase text-black font-extrabold">TITAN</span>
+</div>
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-space-sm max-w-2xl text-center lg:text-left">
+<div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded bg-black/10 self-center lg:self-start">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-widest">OFERTA POR TIEMPO LIMITADO // AHORRA 35%</span>
+</div>
+<h2 class="font-headline-lg lg:font-headline-xl text-headline-lg lg:text-headline-xl uppercase tracking-tight leading-none text-black">
+            ⚡ COMBO ATLETA TITÁN: STRAPS + SHAKER TÁCTICO + LLAVERO MOSQUETÓN
+          </h2>
+<p class="font-body-md text-body-md text-black/80 font-medium">
+            El arsenal indispensable para tus sesiones pesadas. Incluye envío express sin costo a toda la república.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-lg bg-black p-space-lg rounded border border-black/40 text-tertiary shrink-0 shadow-2xl">
+<!-- Countdown Boxes -->
+<div class="flex items-center gap-2">
+<div class="flex flex-col items-center">
+<span class="font-headline-md text-headline-md text-primary-container font-mono bg-surface-container-high px-3 py-1 rounded" id="cd-hours">08</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Horas</span>
+</div>
+<span class="text-primary-container font-bold text-xl mb-4">:</span>
+<div class="flex flex-col items-center">
+<span class="font-headline-md text-headline-md text-primary-container font-mono bg-surface-container-high px-3 py-1 rounded" id="cd-mins">42</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Minutos</span>
+</div>
+<span class="text-primary-container font-bold text-xl mb-4">:</span>
+<div class="flex flex-col items-center">
+<span class="font-headline-md text-headline-md text-primary-container font-mono bg-surface-container-high px-3 py-1 rounded" id="cd-secs">15</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Segundos</span>
+</div>
+</div>
+<!-- Price & Button -->
+<div class="flex flex-col items-center sm:items-start pl-0 sm:pl-space-md sm:border-l border-surface-bright gap-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-primary-container font-bold">$899 MXN</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant line-through">$1,380</span>
+</div>
+<button class="w-full px-space-md py-2.5 bg-primary-container hover:bg-white text-on-primary-fixed font-label-md text-label-md font-bold uppercase tracking-wider rounded transition-all flex items-center justify-center gap-space-xs" type="button">
+<span>RECLAMAR OFERTA</span>
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. NUEVOS LANZAMIENTOS -->
+<section class="w-full py-space-xl lg:py-24 bg-surface-container-lowest">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b border-outline-variant/30 pb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest font-bold">// DROP LIMITADO // RECIÉN LLEGADO</span>
+<h2 class="font-headline-lg lg:font-headline-xl text-headline-lg lg:text-headline-xl text-tertiary uppercase mt-1">NUEVOS LANZAMIENTOS</h2>
+</div>
+<a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-primary-container hover:underline uppercase font-bold" href="#">
+<span>VER TODO EL DROP (12 ARTÍCULOS)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-tablet lg:gap-gutter-desktop">
+<!-- New 1 -->
+<div class="group flex flex-col bg-surface-container rounded border border-outline-variant/40 hover:border-primary-container/80 transition-all duration-300 overflow-hidden">
+<div class="relative w-full h-72 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Blackout 10mm powerlifting lever belt premium grade top grain leather isolated against dark steel industrial background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPwX5kpSf2PcfKKjRdayPxkY49NmueP8gE5qc-JSXqbiU24oDFzp2OZBRAehTKHReUaxttywcAhe5IvcmiZnZIsQ5bJdi2ztCKTyjmiU8iZnF-Ia4LdF-lbhSqHlLJsbRLwfeZqi49ua1ZbrNQgyFCcBfYeKyKL9XJFOZS1hqIHP8jv3vzQp2pOunECyhFzcZZu_ul5MNk6_Le6Mk5juaitVsCRilXgy5hsP-WS1FBAjvi67w2y3wmBg"/>
+<span class="absolute top-3 left-3 bg-secondary-container text-tertiary font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase tracking-wider">NUEVO</span>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-mono">10MM // ACERO INOXIDABLE</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-1">Cinturón Powerlifting de Palanca 10mm</h3>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">$1,899 MXN</span>
+<button class="p-2 bg-surface-container-high hover:bg-primary-container hover:text-black text-tertiary rounded transition-colors" title="Añadir" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- New 2 -->
+<div class="group flex flex-col bg-surface-container rounded border border-outline-variant/40 hover:border-primary-container/80 transition-all duration-300 overflow-hidden">
+<div class="relative w-full h-72 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Heavyweight dark gray acid wash gym hoodie with embroidered athletic discipline logo on back resting on wood locker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzmay5XmJPTNA7eLRO-EW8Wz66LJduqWb7HSwDI0_HCJwJ7ysgYp6S8smw47qv1AkjHMCQ8VXrY6BVGI1FCxFBfMhmy-IK5l81Tot-gbqtU7kBU0xl036dlAFjTpg0uyidkK7GJ-7ZpyU7IOhDxgOzK3vp3ZR_DQdoFUeQgQvMuT2KpVExTxkt7JAz3sDKBaxQKdWKxFBZ2Bc4LRQySvqbmrcplaZB5biee8VrAD1l1m1JMpCXGPHNCQ"/>
+<span class="absolute top-3 left-3 bg-secondary-container text-tertiary font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase tracking-wider">NUEVO</span>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-mono">450 GSM // ACID WASH</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-1">Hoodie Heavyweight "Discipline"</h3>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">$1,199 MXN</span>
+<button class="p-2 bg-surface-container-high hover:bg-primary-container hover:text-black text-tertiary rounded transition-colors" title="Añadir" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- New 3 -->
+<div class="group flex flex-col bg-surface-container rounded border border-outline-variant/40 hover:border-primary-container/80 transition-all duration-300 overflow-hidden">
+<div class="relative w-full h-72 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Pair of rigid 18 inch heavy elastic wrist wraps in tactical army green and black on industrial barbell bench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD1idzV-Kj66zdd_JQjqtBltVKd0Xjp-xGoAqudEvsp7_Saa-288d-s0kjT3GpxRf5KLYZac5qVGM2nIBWPalQTJoCYPDgS74XJwEEDLR0g5cnmxTGyYWA2ic7GdI7NfmbaZNjC9wD6EhJBnmgO4ECkQUV8T76YYZuIJKZdenM2TIIgpo7JqjjYNIh6OWJbMXLmz30PfSeUweS9leA9BTPTWdJJVNN7gn4BIruvFEDHdOz2Xy-inIsXQ"/>
+<span class="absolute top-3 left-3 bg-secondary-container text-tertiary font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase tracking-wider">NUEVO</span>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-mono">18 PULGADAS // EXTRA RÍGIDAS</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-1">Muñequeras Elásticas Rigid 18"</h3>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">$389 MXN</span>
+<button class="p-2 bg-surface-container-high hover:bg-primary-container hover:text-black text-tertiary rounded transition-colors" title="Añadir" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- New 4 -->
+<div class="group flex flex-col bg-surface-container rounded border border-outline-variant/40 hover:border-primary-container/80 transition-all duration-300 overflow-hidden">
+<div class="relative w-full h-72 bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Tactical waterproof gym duffle bag 45L matte black with molle webbing and shoe compartment on gym floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVaqL8HOzQGARnrajxzonIYXeQrACEWtCuZCXFwqxlWWUnhOpOWHmea7sxxPtp4OVQaBI-dmrdOdWfoOvr4XFL2LbCUf9WQ9Jf1IBvC5zPo9zViidKrWf_iibSsXOQnRwao_HJIQlrprix_yaOXxj5jjDLJwAZe3cC4TiDjFd0jNutmLalkd_Bl7qiokURnD5QMpgMseYqNhowJkzRb53hYCxRh9_rSys4lBOWAFNyZM6V5YGhtyOt9g"/>
+<span class="absolute top-3 left-3 bg-secondary-container text-tertiary font-label-sm text-label-sm font-bold px-2 py-0.5 rounded uppercase tracking-wider">NUEVO</span>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-mono">45 LITROS // CORDURA 1000D</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase mt-1">Mochila Duffle Táctica Gym 45L</h3>
+</div>
+<div class="pt-space-xs flex items-center justify-between border-t border-outline-variant/30">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">$1,450 MXN</span>
+<button class="p-2 bg-surface-container-high hover:bg-primary-container hover:text-black text-tertiary rounded transition-colors" title="Añadir" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. ACCESORIOS EN CONTEXTO (LOOKBOOK) -->
+<section class="w-full py-space-xl lg:py-24 bg-surface-container border-y border-outline-variant/30">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest font-bold">// LOOKBOOK EDITORIAL</span>
+<h2 class="font-headline-lg lg:font-headline-xl text-headline-lg lg:text-headline-xl text-tertiary uppercase mt-1">EL ARSENAL EN ACCIÓN</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Capturado en sesiones de carga máxima. Rendimiento sin filtros en los templos de fuerza más rigurosos.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-tablet lg:gap-gutter-desktop">
+<!-- Hotspot Card 1 -->
+<div class="relative group rounded overflow-hidden h-[440px] bg-surface-container-lowest border border-outline-variant/30">
+<img class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700" data-alt="Athletic male hands strapped to heavy deadlift bar with white chalk exploding mid lift in dark hardcore powerlifting dungeon gym" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmCWeTy0cht8EMmTnKCsuHVzyPeSmJZ3yIZ2EAp-QTsUApXUAf0H6KQHCXn3eZn3ZFu6Z36-RwyYJbskEV8zKtJykBMCRq4StxdFI46rHw_t1v5RPQDey5-GxLkEYy_EcVbx1DQC7VrT3_dswaOcM_vccZnarTL3GutyMJeSc6YB6VSbWOGluuzeArTUkK7BkY7VSSqHzxtr6qQ08FwFtO1WMioo-1suY0FOZVJW7xUQ7wpzKhWdVCKw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- Interactive Hotspot Marker -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="relative flex h-6 w-6 cursor-pointer">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-6 w-6 bg-primary-container text-black items-center justify-center font-bold text-xs">+</span>
+</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-md bg-surface-container-low/90 backdrop-blur-sm border-t border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-bold tracking-wider">DEADLIFT ZONE // 01</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase">Kevlar Grip Straps</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Soportando tracción continua en cargas superiores a 250 KG.</p>
+</div>
+</div>
+<!-- Hotspot Card 2 -->
+<div class="relative group rounded overflow-hidden h-[440px] bg-surface-container-lowest border border-outline-variant/30">
+<img class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700" data-alt="Fitness athlete taking a break drinking cold water from sleek black stainless steel shaker bottle in modern dark gym locker area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCClROQcKbSBVPRYEbmbiM1_asQ0dCjXVWS_-9TpHFsXrHT4X-osHx0QLM4QMjIJn4gPjAhYEoKOlFhNeOoAjd3fPTFzxNTSZrtfCkL9CCva0Q5OzxADCZWPUg9F64Pi2AKkyn5X0vCgphBVZGV0PRFgS2CssN4xditO8BgvPSmi9rP_Qjczl-Py3XY7pc6uQoFEF8nOIhe0N1QMDsaOL1OQDstA9z9hZ26KSMJzFmnyaBaAQwk5cjTPQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- Interactive Hotspot Marker -->
+<div class="absolute top-1/3 right-1/3">
+<span class="relative flex h-6 w-6 cursor-pointer">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-6 w-6 bg-primary-container text-black items-center justify-center font-bold text-xs">+</span>
+</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-md bg-surface-container-low/90 backdrop-blur-sm border-t border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-bold tracking-wider">POST-WORKOUT FUEL // 02</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase">Shaker Térmico 900ml</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Aislamiento al vacío manteniendo mezclas heladas bajo calor extremo.</p>
+</div>
+</div>
+<!-- Hotspot Card 3 -->
+<div class="relative group rounded overflow-hidden h-[440px] bg-surface-container-lowest border border-outline-variant/30">
+<img class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700" data-alt="Tactical gym accessories keys with heavy duty carabiner and wrist wraps arranged on dark metal industrial gym bench" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOBw6VGs1ek3bOZ5hIcPzcbA196s4p8_E6EBtjBf0Zjr_IBw82umjQ3vyLLd5ku_Bw_qIiL_6nS2u1uU4BSGdHCHgGzQlg8z8nEpwIQ8lihLmANyab9AlRlGHEb0Hb-ruG65n_VSUF0olSDEGKyxef97qrXSAXb1aqRELYH5bVZJbRI0uU7CJ6cSlFP5OZyE3sa0Z2z1uF8ZAjmpvG2uLZCoQr8oR7tbbpSI4zoa1OuvL5Tg0-lQfPYA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- Interactive Hotspot Marker -->
+<div class="absolute bottom-1/3 left-1/3">
+<span class="relative flex h-6 w-6 cursor-pointer">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-6 w-6 bg-primary-container text-black items-center justify-center font-bold text-xs">+</span>
+</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 p-space-md bg-surface-container-low/90 backdrop-blur-sm border-t border-outline-variant/30">
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-bold tracking-wider">STREET TO GYM // 03</span>
+<h3 class="font-headline-sm text-headline-sm text-tertiary uppercase">Llavero Mosquetón EDC</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Aleación de aluminio aeronáutico y cinta de nylon reforzada.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 11. NEWSLETTER (CLUB VIP PULSE) -->
+<section class="w-full py-space-xl lg:py-20 bg-surface-container-lowest">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="rounded-lg bg-surface-container-low border border-primary-container/40 p-space-lg lg:p-space-xl relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-3xl mx-auto flex flex-col items-center text-center gap-space-md relative z-10">
+<div class="w-12 h-12 rounded-full bg-primary-container/10 border border-primary-container/50 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest font-bold">// CLUB VIP EXCLUSIVO</span>
+<h2 class="font-headline-lg lg:font-headline-xl text-headline-lg lg:text-headline-xl text-tertiary uppercase mt-1">ÚNETE AL ESCUADRÓN IRONPULSE</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto mt-space-xs leading-relaxed">
+              Suscríbete y recibe un <span class="text-primary-container font-bold">15% OFF</span> en tu primera orden, acceso anticipado de 2 horas a drops exclusivos de unidades limitadas y guías técnicas de levantamiento.
+            </p>
+</div>
+<form class="w-full max-w-md flex flex-col sm:flex-row gap-space-xs mt-space-xs" onsubmit="event.preventDefault(); alert('¡Bienvenido al escuadrón! Tu código con 15% OFF ha sido enviado.');">
+<input class="px-space-md py-3 rounded bg-surface-container-lowest border border-outline-variant/60 text-tertiary placeholder:text-on-surface-variant/60 focus:outline-none focus:border-primary-container flex-1 font-body-md text-body-md" placeholder="Ingresa tu correo electrónico..." required="" type="email"/>
+<button class="px-space-lg py-3 bg-primary-container hover:bg-primary-fixed text-on-primary-fixed font-label-md text-label-md font-bold uppercase tracking-wider rounded transition-all shadow-[0_0_15px_rgba(195,244,0,0.3)] shrink-0" type="submit">
+              OBTENER 15% OFF
+            </button>
+</form>
+<span class="font-label-sm text-[11px] text-on-surface-variant tracking-wider uppercase">
+            CERO SPAM. SOLO DROPS TÉCNICOS Y EQUIPAMIENTO DE ÉLITE. CANCELA CUANDO QUIERAS.
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- 12. PREGUNTAS FRECUENTES (FAQ INTERACTIVO) -->
+<section class="w-full py-space-xl lg:py-24 bg-surface-container border-t border-outline-variant/30">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex flex-col gap-space-xl">
+<div class="text-center max-w-2xl mx-auto">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-widest font-bold">// DUDAS FRECUENTES</span>
+<h2 class="font-headline-lg lg:font-headline-xl text-headline-lg lg:text-headline-xl text-tertiary uppercase mt-1">INFORMACIÓN ESENCIAL</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">Todo lo que necesitas saber sobre envíos, tallas, garantías y pedidos.</p>
+</div>
+<div class="max-w-3xl mx-auto w-full flex flex-col gap-space-xs" id="faq-container">
+<!-- FAQ 1 -->
+<div class="faq-item rounded bg-surface-container-low border border-outline-variant/30 overflow-hidden">
+<button class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md hover:bg-surface-container-high/50 transition-colors" type="button">
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold tracking-wide">¿Cómo elijo mi talla adecuada en ropa oversize?</span>
+<span class="material-symbols-outlined text-[20px] text-primary-container faq-icon transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm border-t border-outline-variant/20">
+            Nuestras prendas oversize ya cuentan con una caída holgada premeditada de hombros y torso. Te recomendamos pedir tu talla regular para el calce drop-shoulder característico de la marca. Si prefieres un ajuste más atlético pegado al cuerpo, puedes elegir una talla menos.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-item rounded bg-surface-container-low border border-outline-variant/30 overflow-hidden">
+<button class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md hover:bg-surface-container-high/50 transition-colors" type="button">
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold tracking-wide">¿Cuánto tiempo tarda en llegar mi pedido y cuánto cuesta el envío?</span>
+<span class="material-symbols-outlined text-[20px] text-primary-container faq-icon transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm border-t border-outline-variant/20">
+            El envío es gratis a todo México en compras superiores a $999 MXN. Para pedidos menores, el envío estándar es de $120 MXN. Las entregas toman entre 2 a 4 días hábiles mediante FedEx o Estafeta con número de rastreo activo enviado directo a tu correo.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-item rounded bg-surface-container-low border border-outline-variant/30 overflow-hidden">
+<button class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md hover:bg-surface-container-high/50 transition-colors" type="button">
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold tracking-wide">¿Cuál es la política de garantía en straps y accesorios de levantamiento?</span>
+<span class="material-symbols-outlined text-[20px] text-primary-container faq-icon transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm border-t border-outline-variant/20">
+            Todos nuestros straps, cinturones de palanca y muñequeras cuentan con garantía extendida de 12 meses contra defectos de manufactura, rotura de costuras de Kevlar o fallas en el mecanismo de palanca. Si se rompe entrenando duro, te enviamos un reemplazo nuevo sin costo.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-item rounded bg-surface-container-low border border-outline-variant/30 overflow-hidden">
+<button class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md hover:bg-surface-container-high/50 transition-colors" type="button">
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold tracking-wide">¿Qué métodos de pago aceptan en la tienda?</span>
+<span class="material-symbols-outlined text-[20px] text-primary-container faq-icon transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm border-t border-outline-variant/20">
+            Aceptamos tarjetas de débito y crédito (Visa, MasterCard, American Express), pagos por PayPal, Mercado Pago, transferencias electrónicas SPEI inmediatas y pagos en efectivo en tiendas OXXO. Además dispones de pagos a plazos sin intereses con Kueski Pay y Aplazo.
+          </div>
+</div>
+<!-- FAQ 5 -->
+<div class="faq-item rounded bg-surface-container-low border border-outline-variant/30 overflow-hidden">
+<button class="faq-toggle w-full p-space-md text-left flex items-center justify-between gap-space-md hover:bg-surface-container-high/50 transition-colors" type="button">
+<span class="font-label-md text-label-md text-tertiary uppercase font-bold tracking-wide">¿Cómo puedo gestionar un cambio o devolución?</span>
+<span class="material-symbols-outlined text-[20px] text-primary-container faq-icon transition-transform">expand_more</span>
+</button>
+<div class="faq-content hidden p-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm border-t border-outline-variant/20">
+            El proceso es 100% digital en 3 pasos: entra a nuestra sección de Cambios y Devoluciones, coloca tu número de orden y genera tu guía de paquetería prepagada. Cuentas con 30 días naturales desde la entrega para cambios de talla sin costo de flete.
+          </div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple Countdown Timer Micro-interaction
+  (function initCountdown() {
+    let hours = 8;
+    let minutes = 42;
+    let seconds = 15;
+
+    const elHours = document.getElementById('cd-hours');
+    const elMins = document.getElementById('cd-mins');
+    const elSecs = document.getElementById('cd-secs');
+
+    if (!elHours || !elMins || !elSecs) return;
+
+    setInterval(() => {
+      if (seconds > 0) {
+        seconds--;
+      } else {
+        seconds = 59;
+        if (minutes > 0) {
+          minutes--;
+        } else {
+          minutes = 59;
+          if (hours > 0) {
+            hours--;
+          }
+        }
+      }
+
+      elHours.textContent = hours.toString().padStart(2, '0');
+      elMins.textContent = minutes.toString().padStart(2, '0');
+      elSecs.textContent = seconds.toString().padStart(2, '0');
+    }, 1000);
+  })();
+
+  // Simple Accordion Toggle
+  document.querySelectorAll('.faq-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      const isHidden = content.classList.contains('hidden');
+
+      // Close open items
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-low"><div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-desktop"><div class="lg:col-span-2 flex flex-col gap-space-md pr-0 lg:pr-margin"><div class="flex items-center gap-space-sm"><img alt="IronPulse Athletic Gym Gear Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XhNhdoVU27wqWszfKWRT8euZ8xjLQ7tCwTriWBnFOUCk8zh_wNuS3Fz_G3ZfrfLUS5VnF7O1ZVFenrVhggekE2iFR7H-geQrxTmuYEt3JZ6E_rYs-0joZ5l-8O8r4iab9KcorKlcA-_ArTwKaqHh92QQxmozk1Letuzeg3iTVn8IaJhGAUNIIguMZzUuocaH4i69Xut8HBJlCJFySNHn6xY47stBbSM991Z4rz25MB_XYh6AWnhsJe-NE"/><span class="font-headline-lg text-headline-lg uppercase text-primary tracking-wider">IRONPULSE</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Ropa deportiva y accesorios de alto rendimiento diseñados para atletas que superan sus propios límites.</p><div class="flex items-center gap-space-md pt-space-xs"><a class="w-9 h-9 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary-container rounded flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a class="w-9 h-9 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary-container rounded flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">play_circle</span></a><a class="w-9 h-9 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary-container rounded flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">smart_display</span></a><a class="w-9 h-9 bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary-container rounded flex items-center justify-center transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">groups</span></a></div></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg uppercase tracking-wider text-primary">TIENDA</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Shorts de Entrenamiento</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Playeras Oversize</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Sudaderas Heavyweight</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Straps &amp; Cinturones</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Shakers &amp; Botellas</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Colección Limitada</li></ul></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg uppercase tracking-wider text-primary">AYUDA</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Guía de Tallas</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Envíos y Tiempos</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Cambios y Devoluciones</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Rastrear Pedido</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Preguntas Frecuentes</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Contacto</li></ul></div><div class="flex flex-col gap-space-md"><span class="font-label-lg text-label-lg uppercase tracking-wider text-primary">NOSOTROS</span><ul class="flex flex-col gap-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Historia de IronPulse</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Comunidad de Atletas</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Programa de Embajadores</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Sustentabilidad</li><li class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary-container transition-colors cursor-pointer">Blog de Entrenamiento</li></ul></div></div><div class="mt-space-xl pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-xs flex-wrap"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mr-space-xs">MÉTODOS DE PAGO:</span><div class="px-space-xs py-0.5 bg-surface-container font-label-sm text-label-sm text-on-surface rounded">VISA</div><div class="px-space-xs py-0.5 bg-surface-container font-label-sm text-label-sm text-on-surface rounded">MASTERCARD</div><div class="px-space-xs py-0.5 bg-surface-container font-label-sm text-label-sm text-on-surface rounded">AMEX</div><div class="px-space-xs py-0.5 bg-surface-container font-label-sm text-label-sm text-on-surface rounded">PAYPAL</div><div class="px-space-xs py-0.5 bg-surface-container font-label-sm text-label-sm text-on-surface rounded">MERCADO PAGO</div><div class="px-space-xs py-0.5 bg-surface-container font-label-sm text-label-sm text-on-surface rounded">APPLE PAY</div></div><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant">LATAM / MXN ($)</span><div class="w-2 h-2 rounded-full bg-primary-container"></div></div></div><div class="mt-space-md pt-space-sm flex flex-col md:flex-row items-center justify-between gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><p>© 2025 IRONPULSE ATHLETIC GEAR. TODOS LOS DERECHOS RESERVADOS.</p><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="#">POLÍTICA DE PRIVACIDAD</a><a class="hover:text-primary transition-colors" href="#">TÉRMINOS DEL SERVICIO</a><a class="hover:text-primary transition-colors" href="#">CONFIGURACIÓN DE COOKIES</a></div></div></div></footer></body></html>
